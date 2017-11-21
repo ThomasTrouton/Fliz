@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fliz</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="lesson1Content">This is the learning content in app
+    \n ·Everyone loves lists of facts.
+    \n ·Bulleted lists are even better.
+    \n ·Play with the interactive graph.</string>
+</resources>
