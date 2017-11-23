@@ -31,7 +31,7 @@
         app:stackFrom="top"
         app:swipeDirection="freedom_no_bottom"
         app:swipeEnabled="true"
-        app:swipeThreshold="0.75"
+        app:swipeThreshold="0.5"
         app:topOverlay="@layout/overlay_top"
         app:translationDiff="12"
         app:visibleCount="4" />
