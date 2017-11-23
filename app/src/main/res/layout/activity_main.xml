@@ -51,16 +51,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="lesson2"
-            android:text="Lesson \n2"
+            android:text="Quiz \n1"
             android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            app:layout_constraintHorizontal_bias="0.65"/>
+            app:layout_constraintVertical_bias="0.6" />
 
         <Button
             android:id="@+id/button3"
