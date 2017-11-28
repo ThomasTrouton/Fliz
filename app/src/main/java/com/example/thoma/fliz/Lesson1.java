@@ -1,9 +1,10 @@
 package com.example.thoma.fliz;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -81,4 +82,14 @@ public class Lesson1 extends AppCompatActivity {
         return values;
     }
 
+
+    public void launchquiz(View view) {
+        Intent intent = new Intent(this, Lesson2.class);
+        finish();
+        startActivity(intent);
+    }
+
+    public void finish(View v){
+        finish();
+    }
 }

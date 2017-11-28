@@ -114,9 +114,11 @@ public class Lesson2 extends AppCompatActivity {
     private List<Question> createQuestions() {
         List<Question> spots = new ArrayList<>();
         spots.add(new Question("APR", "APR stands for Annual Percentage Rate.", true));
-        spots.add(new Question("Secured Loans", "You can lose your home due to an unsecured loan.",false));
-        spots.add(new Question("Credit limit","A credit limit is the amount you must spend each month on your credit card",false));
-        spots.add(new Question("Minimum repayment","You must pay off a minimum amount of the balance on your credit card each month.",true ));
+        spots.add(new Question("Credit Checks", "My credit history will not be considered when applying for a credit card.", false));
+        spots.add(new Question("Credit Limits","Almost all cards are subject to a credit limit.",true ));
+        spots.add(new Question("Interest Rates","The level of interest levied on credit card debt is similar to that of other financial borrowing, such as a personal loan.",false));
+        spots.add(new Question("Repayment","If I pay my credit card in full by the due date then I will not owe any interest to the bank",true));
+        spots.add(new Question("Due Dates","There is no penalty incurred if I pay my balance after the due date.",false ));
         totalAns = spots.size();
         return spots;
     }
@@ -153,32 +155,31 @@ public class Lesson2 extends AppCompatActivity {
 
 
 
+                try {
+                    if (direction.toString().equals("Top")) {
+                        Log.d("oncardSwiped", "readdlast");
 
-                if(direction.toString().equals("Top"))
+                        LinkedList<Question> spots = extractRemainingTouristSpots();
+                        spots.addLast(adapter.getItem(cardStackView.getTopIndex() - 1));
+                        adapter.clear();
+
+                        adapter.addAll(spots);
+
+                        adapter.notifyDataSetChanged();
+
+                    } else if (adapter.getIsTrue(cardStackView.getTopIndex() - 1) && direction.toString().equals("Right")) {
+                        //Log.d("Is True", "yes");
+                        Log.d("correct", "case1");
+                        correctAns++;
+                    } else if (!adapter.getIsTrue(cardStackView.getTopIndex() - 1) && direction.toString().equals("Left")) {
+                        Log.d("correct", "case2");
+                        correctAns++;
+                    } else incorrectAns++;
+                }
+                catch (Exception e)
                 {
-                    Log.d("oncardSwiped","readdlast");
-
-                    LinkedList<Question> spots = extractRemainingTouristSpots();
-                    spots.addLast(adapter.getItem(cardStackView.getTopIndex()-1));
-                    adapter.clear();
-
-                    adapter.addAll(spots);
-
-                    adapter.notifyDataSetChanged();
 
                 }
-                else if(adapter.getIsTrue(cardStackView.getTopIndex()-1)&&direction.toString().equals("Right"))
-                {
-                    //Log.d("Is True", "yes");
-                    Log.d("correct","case1");
-                    correctAns++;
-                }
-                else if (!adapter.getIsTrue(cardStackView.getTopIndex()-1)&&direction.toString().equals("Left"))
-                {
-                    Log.d("correct", "case2");
-                    correctAns++;
-                }
-                else incorrectAns++;
                 String str= String.valueOf(correctAns);
                 Log.d("correctAns",str);
                 Log.d("cards remaining",String.valueOf(totalAns - cardStackView.getTopIndex()));
@@ -499,9 +500,9 @@ public class Lesson2 extends AppCompatActivity {
 
     }
 
-    public void passPress(View v){
-        swipeUp();
-    }
+   // public void passPress(View v){
+    //    swipeUp();
+    //}
 
     public void truePress(View v){
          swipeRight();
@@ -518,9 +519,18 @@ public class Lesson2 extends AppCompatActivity {
         Log.d("out of a possible", String.valueOf(totalAns));
         resText.setText("Quiz Complete.\n You Scored "+correctAns+" out of "+totalAns+".");
         resText.setVisibility(View.VISIBLE);
+        findViewById(R.id.button5).setVisibility(View.VISIBLE);
+        findViewById(R.id.button4).setVisibility(View.VISIBLE);
         findViewById(R.id.button).setVisibility(View.GONE);
-        findViewById(R.id.button4).setVisibility(View.GONE);
+        findViewById(R.id.textView5).setVisibility(View.GONE);
         findViewById(R.id.button6).setVisibility(View.GONE);
     }
 
+    public void finish(View view) {
+        finish();
+    }
+
+    public void retry(View view) {
+        recreate();
+    }
 }
