@@ -3,8 +3,10 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="lesson1Content">This is the learning content in app
-    \n ·Everyone loves lists of facts.
-    \n ·Bulleted lists are even better.
-    \n ·Play with the interactive graph.</string>
+    <string name="lesson1Content"><bold>Introduction:</bold>
+    \n Credit cards are not a simple financial product and should not be used complacently.  In this lesson we will learn about how best to use them.
+    \n \n Understand the basics: \n
+    A credit card is a way of borrowing money that lets you  buy items now up to a pre determined credit limit and then pay later for them.  \n
+    Payments for these items can be made in one go or in installments.\n
+    Each time you spend, the amount will be added to the card\'s balance. This balance is the total amount you owe to the bank.</string>
 </resources>

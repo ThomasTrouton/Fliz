@@ -2,12 +2,13 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@color/colorPrimaryDark"/>
+        android:drawable="@color/launcherGray"/>
 
     <item>
         <bitmap
-            android:gravity="center"
-            android:src="@mipmap/fliz"/>
+            android:gravity="fill_horizontal"
+            android:src="@mipmap/fliz"
+            />
     </item>
 
 
