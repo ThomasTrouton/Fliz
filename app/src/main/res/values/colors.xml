@@ -7,4 +7,7 @@
     <color name="black_overlay">#66000000</color>
     <color name="black">#FF000000</color>
     <color name="translucentWhite">#CCFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navy">#0a5371</color>
+
 </resources>
