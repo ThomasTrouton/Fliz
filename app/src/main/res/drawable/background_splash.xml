@@ -2,11 +2,11 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@color/launcherGray"/>
+        android:drawable="@color/navy"/>
 
     <item>
         <bitmap
-            android:gravity="fill_horizontal"
+            android:gravity="center|fill_horizontal"
             android:src="@mipmap/fliz"
             />
     </item>

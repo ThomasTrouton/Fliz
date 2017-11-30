@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/l2"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/fliz_dark"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/person"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/navy"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <android.support.constraint.ConstraintLayout
+    android:layout_weight="1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.thoma.fliz.Lesson2"
@@ -114,3 +154,120 @@
 
 
 </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <Button
+            android:id="@+id/imageButtonView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Journey"
+            android:onClick="finish"
+            android:textColor="@color/white"
+            android:background="@color/navy"
+            android:textAlignment="center"
+            />
+
+        <ImageView
+            android:id="@+id/bottomLogo"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/ic_dialog_map"
+            android:background="@color/navy"
+            android:onClick="finish"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView"
+            android:paddingTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/imageButtonView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:text="Scores"
+            android:textColor="@color/navy"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView2"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/btn_star_big_off"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView1"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView1"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView1"
+            />
+
+        <Button
+            android:id="@+id/imageButtonView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:text="Social"
+            android:textColor="@color/navy"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView1"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView3"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/ic_menu_share"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView2"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView2"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView2"
+            />
+
+
+
+        <Button
+            android:id="@+id/imageButtonView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:text="Search"
+            android:textColor="@color/navy"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView2"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView3"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView3"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView3"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/navy"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

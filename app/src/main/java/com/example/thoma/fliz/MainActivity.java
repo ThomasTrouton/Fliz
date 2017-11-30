@@ -2,17 +2,15 @@ package com.example.thoma.fliz;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ScrollView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int UI_ANIMATION_DELAY = 100;
+    public static final int UI_ANIMATION_DELAY = 50;
     private final Handler mHideHandler = new Handler();
     private View mContentView;
     private ScrollView mScrollView;
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         hide();
     }
 
-    private void hide() {
+    public void hide() {
         // Schedule a runnable to remove the status and navigation bar after a delay
         mHideHandler.postDelayed(mHidePart2Runnable, UI_ANIMATION_DELAY);
     }
