@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,5 +86,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void leaderboard(android.view.View view)
+    {
+        Intent intent = new Intent(this, Leaderboard.class);
+        startActivity(intent);
+    }
+
+    public void social(View view) {
+        Intent intent = new Intent(this, Social.class);
+        startActivity(intent);
+    }
+    public void search(View view) {
+        Intent intent = new Intent(this, Search.class);
+        startActivity(intent);
+    }
 }
 

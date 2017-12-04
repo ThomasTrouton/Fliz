@@ -30,6 +30,7 @@
 
         android:layout_alignParentTop="true"
 
+
         android:background="@drawable/background_black_gradation">
 
         <TextView
@@ -55,7 +56,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/navy"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,9 +72,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:layout_marginTop="132dp"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/navy"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.5"

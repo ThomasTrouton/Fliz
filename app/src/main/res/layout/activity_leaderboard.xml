@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.example.thoma.fliz.Leaderboard">
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:src="@mipmap/fliz_dark"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@mipmap/person"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/navy"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/leaderboardText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="22dp"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        android:text="1.)  Player 1   45 correct answers\n2.)  Player 2   20 correct answers\n3.)  Player 3   10 correct answers" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+
+        <Button
+            android:id="@+id/imageButtonView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true"
+            android:text="Journey"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView1"
+            android:onClick="finish"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="false"
+            android:background="@color/white"
+            android:clickable="true"
+            android:paddingTop="5dp"
+            android:src="@android:drawable/ic_dialog_map"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView"
+            android:onClick="finish"/>
+
+        <Button
+            android:id="@+id/imageButtonView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/navy"
+            android:text="Scores"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView2" />
+
+        <ImageView
+            android:id="@+id/bottomLogo3"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="@color/navy"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/btn_star_big_off"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView1"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView1"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView1"
+            android:paddingTop="5dp"/>
+
+        <Button
+            android:id="@+id/imageButtonView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:text="Social"
+            android:textColor="@color/navy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView1"
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView3"
+            android:onClick="social"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/ic_menu_share"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView2"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView2"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView2"
+            android:onClick="social"/>
+
+
+        <Button
+            android:id="@+id/imageButtonView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:text="Search"
+            android:textColor="@color/navy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButtonView2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="search"/>
+
+        <ImageView
+            android:id="@+id/bottomLogo1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="false"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toTopOf="@id/imageButtonView3"
+            app:layout_constraintLeft_toLeftOf="@id/imageButtonView3"
+            app:layout_constraintRight_toRightOf="@id/imageButtonView3"
+            android:onClick="search"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/navy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

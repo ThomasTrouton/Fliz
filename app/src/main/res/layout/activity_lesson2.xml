@@ -25,7 +25,7 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:padding="15dp"
+            android:padding="10dp"
             android:adjustViewBounds="true"
             android:src="@mipmap/person"
             app:layout_constraintRight_toRightOf="parent" />
@@ -50,38 +50,40 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="180dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:onClick="falsePress"
         android:text="False"
+        android:background="@android:color/holo_red_light"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button6"/>
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="180dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:onClick="truePress"
         android:text="True"
+        android:background="@android:color/holo_green_light"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/button"
         app:layout_constraintRight_toRightOf="parent" />
 
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/cardView"
-        android:layout_width="368dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-
-        android:layout_marginBottom="8dp"
-
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:elevationEnabled="true"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +108,7 @@
         android:layout_height="wrap_content"
         android:text="Quiz: Answer these questions to see how much you have learnt."
         android:textSize="24sp"
+        android:padding="8dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -117,8 +120,8 @@
         android:layout_gravity="center_horizontal"
         android:text="Quiz complete"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textColor="@color/navy"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -128,29 +131,36 @@
 
         />
 
-    <Button
+        <Button
+            android:id="@+id/button5"
+            android:layout_margin="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Return to Main Menu"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:textColor="@color/navy"
+            android:background="@color/lightNavy"
+            app:layout_constraintLeft_toLeftOf="@id/textView4"
+            app:layout_constraintRight_toRightOf="@id/textView4"
+            android:onClick="finish"
+            app:layout_constraintTop_toBottomOf="@id/button4"/>
+
+
+        <Button
         android:id="@+id/button4"
         android:layout_width="0dp"
+        android:layout_margin="16dp"
         android:layout_height="wrap_content"
         android:text="Try Again"
+        android:textColor="@color/navy"
+        android:background="@color/lightNavy"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/textView4"
-        app:layout_constraintLeft_toLeftOf="@id/button5"
-        app:layout_constraintRight_toRightOf="@id/button5"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@id/textView4"
+        app:layout_constraintRight_toRightOf="@id/textView4"
         android:onClick="retry"/>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Return to Main Menu"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:onClick="finish"
-        app:layout_constraintTop_toBottomOf="@id/button4"/>
 
 
 </android.support.constraint.ConstraintLayout>
@@ -198,13 +208,15 @@
             android:text="Scores"
             android:textColor="@color/navy"
             android:background="@color/white"
+            android:onClick="leaderboard"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/imageButtonView"
-            app:layout_constraintRight_toLeftOf="@id/imageButtonView2"/>
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView2" />
 
         <ImageView
             android:id="@+id/bottomLogo3"
             android:layout_width="30dp"
+            android:onClick="leaderboard"
             android:layout_height="30dp"
             android:adjustViewBounds="false"
             android:src="@android:drawable/btn_star_big_off"
@@ -223,7 +235,8 @@
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/imageButtonView1"
-            app:layout_constraintRight_toLeftOf="@id/imageButtonView3"/>
+            app:layout_constraintRight_toLeftOf="@id/imageButtonView3"
+            android:onClick="social"/>
 
         <ImageView
             android:id="@+id/bottomLogo2"
@@ -234,6 +247,7 @@
             app:layout_constraintBottom_toTopOf="@id/imageButtonView2"
             app:layout_constraintLeft_toLeftOf="@id/imageButtonView2"
             app:layout_constraintRight_toRightOf="@id/imageButtonView2"
+            android:onClick="social"
             />
 
 
@@ -248,7 +262,8 @@
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/imageButtonView2"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="search"/>
 
         <ImageView
             android:id="@+id/bottomLogo1"
@@ -259,6 +274,7 @@
             app:layout_constraintBottom_toTopOf="@id/imageButtonView3"
             app:layout_constraintLeft_toLeftOf="@id/imageButtonView3"
             app:layout_constraintRight_toRightOf="@id/imageButtonView3"
+           android:onClick="search"
             />
 
         <ImageView

@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -141,11 +142,11 @@ public class Lesson2 extends AppCompatActivity {
     private List<Question> createQuestions() {
         List<Question> spots = new ArrayList<>();
         spots.add(new Question("APR", "APR stands for Annual Percentage Rate.", true));
-        spots.add(new Question("Credit Checks", "My credit history will not be considered when applying for a credit card.", false));
-        spots.add(new Question("Credit Limits","Almost all cards are subject to a credit limit.",true ));
         spots.add(new Question("Interest Rates","The level of interest levied on credit card debt is similar to that of other financial borrowing, such as a personal loan.",false));
-        spots.add(new Question("Repayment","If I pay my credit card in full by the due date then I will not owe any interest to the bank",true));
-        spots.add(new Question("Due Dates","There is no penalty incurred if I pay my balance after the due date.",false ));
+        spots.add(new Question("Credit Checks", "Your credit history will be considered when applying for a credit card.", true));
+        spots.add(new Question("Credit Limits","Almost all credit cards are subject to a credit limit.",true ));
+        spots.add(new Question("Repayment","Even if I pay my credit card in full by the due date then I will still owe interest to the bank",false));
+
         totalAns = spots.size();
         return spots;
     }
@@ -560,4 +561,24 @@ public class Lesson2 extends AppCompatActivity {
     public void retry(View view) {
         recreate();
     }
+
+    public void leaderboard(View view){
+            Intent intent = new Intent(this, Leaderboard.class);
+            finish();
+            startActivity(intent);
+        }
+
+    public void social(View view){
+        Intent intent = new Intent(this, Social.class);
+        finish();
+        startActivity(intent);
+    }
+
+    public void search(View view){
+        Intent intent = new Intent(this, Search.class);
+        finish();
+        startActivity(intent);
+    }
+
 }
+

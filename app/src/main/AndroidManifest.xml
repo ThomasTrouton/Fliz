@@ -9,31 +9,43 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity
             android:name="com.example.thoma.fliz.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_main"
             android:theme="@style/FullscreenTheme"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.thoma.fliz.Lesson2"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.thoma.fliz.Lesson3"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.thoma.fliz.Lesson1"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.thoma.fliz.Lesson2" />
-        <activity android:name="com.example.thoma.fliz.Lesson3" />
-        <activity android:name="com.example.thoma.fliz.Lesson1"></activity>
-        <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.thoma.fliz.Leaderboard"
+        android:screenOrientation="portrait" />
+        <activity android:name="com.example.thoma.fliz.Social"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.thoma.fliz.Search"
+            android:screenOrientation="portrait" />
 
     </application>
 

@@ -9,5 +9,8 @@
     <color name="translucentWhite">#CCFFFFFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="navy">#0a5371</color>
+    <color name="lightNavy">#80cbc4</color>
+    <color name="green">#4caf50</color>
+
 
 </resources>

@@ -9,4 +9,21 @@
     A credit card is a way of borrowing money that lets you  buy items now up to a pre determined credit limit and then pay later for them.  \n
     Payments for these items can be made in one go or in installments.\n
     Each time you spend, the amount will be added to the card\'s balance. This balance is the total amount you owe to the bank.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lesson1slide1">Credit cards are one of the most popular consumer financial products in the UK, however inappropriate use can generate unmanageable debts.  In this lesson we will learn how best to use them.
+    </string>
+    <string name="lesson1slide2title">The basics: </string>
+    <string name="lesson1slide2_1"> A credit card is a way of borrowing money that lets you  buy items now, up to a pre determined credit limit and then pay later for them.</string>
+<string name="lesson1slide2_2">•Payments for these items can be made in one go or in instalments.
+\n•Each time you spend, the amount will be added to the card\'s balance.
+\n•The balance is the total amount you owe to the bank.
+    </string>
+    <string name="lesson1slide3title">Repayment: </string>
+    <string name="lesson1slide3_1">
+        Balances should be paid off at the end of each month.\nAlternatively you can repay it in the future with added interest.\nThe amount of interest will vary depending on:\n•How long it takes you to pay off your balance\n•The APR (Annual Percentage Rate) associated with your credit card.</string>
+    <string name="lesson1slide3_2">
+        Go to the next screen to see an example of how interest builds over time</string>
+    <string name="lesson1slide4">Move the slider to see how interest can accumulate</string>
+    <string name="lesson1slide4title">Compound Interest:"</string>
+
 </resources>
